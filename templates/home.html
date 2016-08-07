@@ -1,0 +1,18 @@
+{% extends "bootstrap/base.html" %}
+
+{% block html_attribs %} lang="kr" {% endblock html_attribs %}
+
+{% block title %} 어류도감 {% endblock title %}
+{% block head %}
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+{% endblock head %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+{% include "navbar.html" %}
+
+{% block content %}
+<div class="container">
+  <h3>Basic Navbar Example</h3>
+  <p>A navigation bar is a navigation header that is placed at the top of the page.</p>
+</div>
+{% endblock content %}

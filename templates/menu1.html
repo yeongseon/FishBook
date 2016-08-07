@@ -1,0 +1,20 @@
+{% extends "bootstrap/base.html" %}
+
+{% block html_attribs %} lang="kr" {% endblock html_attribs %}
+{% block title %} 어류도감 {% endblock title %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<strong><link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"></strong>
+<link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+
+
+{% include "navbar.html" %}
+
+{% block content %}
+<div class="container">
+  <h1>가나다라마바사</h1>
+  <h2>가나다라마바사</h2>
+  <h3>가나다라마바사</h3>
+  <h3>Basic Navbar Example</h3>
+  <p>A navigation bar is a navigation header that is placed at the top of the page.</p>
+</div>
+{% endblock content %}
