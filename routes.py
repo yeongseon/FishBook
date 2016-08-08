@@ -5,7 +5,7 @@ from flask_googlemaps import Map
 
 app = Flask(__name__)
 Bootstrap(app)
-GoogleMaps(app)
+GoogleMaps(app, key="AIzaSyB4tGK7l8s4VDOOXz1bZYw2Roj48n-ZQm8")
 
 @app.route('/')
 def home():
