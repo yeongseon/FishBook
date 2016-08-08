@@ -5,25 +5,27 @@
 
 {% block head %}
 {{super()}}
-<link rel="shortcut icon" type="image/x-icon"
-      href="{{url_for('.static', filename='favicon.ico')}}" />
+<link rel="shortcut icon" href="{{url_for('.static', filename='favicon.ico')}}"  type="image/x-icon" />
 {% endblock %}
 
 {% block styles %}
 {{super()}}
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Noto+Sans' type='text/css'>
 {% endblock %}
 
-{% include "navbar1.html" %}
 
 {% block content %}
-<div class="container-fluid">
-  <h1>가나다라마바사</h1>
-  <h2>가나다라마바사</h2>
-  <h3>가나다라마바사</h3>
-  <h3>Basic Navbar Example</h3>
-  <p>A navigation bar is a navigation header that is placed at the top of the page.</p>
+{% include "navbar1.html" %}
+<div class="container">
+  <div class="starter-template">
+    <h1>가나다라마바사</h1>
+    <h2>가나다라마바사</h2>
+    <h3>가나다라마바사</h3>
+    <h3>Basic Navbar Example</h3>
+    <p>A navigation bar is a navigation header that is placed at the top of the page.</p>
+  </div>
 </div>
-{% endblock  %}
+{% endblock %}

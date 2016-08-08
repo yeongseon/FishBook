@@ -9,28 +9,41 @@
 {% endblock %}
 
 {% block metas %}
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 {% endblock %}
 
 {% block styles %}
 {{super()}}
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Noto+Sans' type='text/css'>
 {% endblock %}
 
-{% include "navbar1.html" %}
-
 {% block content %}
-<div class="container-fluid">
-  <div class="page-header">
-    <h2>오시는 길</h2>
-  </div>
-  <div class="mymap" align="center">
-    {{mymap.html}}
-  </div>
-  <h3>여수시 소호로 524</h3>
-  <h3><i class="fa fa-phone" aria-hidden="true"></i> 061-686-0264</h3>
+{% include "navbar1.html" %}
+<div class="container">
+  <div class="starter-template">
+    <div class="page-header">
+      <h2>오시는 길</h2>
+    </div>
+    <div class="mymap" align="center">
+      {{mymap.html}}
+    </div>
+    <h3>여수시 소호로 524</h3>
+    <h3><i class="fa fa-phone" aria-hidden="true"></i> 061-686-0264</h3>
 
+    <div id="footer_div">
+      <div id="footer_text">
+        <p class="pull-right"><a href="/">홈으로</a></p>
+        <p>&copy; 2016 어류도감. All rights are reserved. </p>
+        <p>전라남도 여수시 소호로 524</p>
+        <p>전화: 061-686-0264</p>
+      </div>
+    </div>
+    
+  </div>
 </div>
 {% endblock %}
