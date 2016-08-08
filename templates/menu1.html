@@ -5,7 +5,13 @@
 
 {% block head %}
 {{super()}}
-<link rel="shortcut icon" href="{{url_for('.static', filename='favicon.ico')}}"  type="image/x-icon" />
+<link rel="icon" href="../static/favicon.ico">
+{% endblock %}
+
+{% block metas %}
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 {% endblock %}
 
 {% block styles %}
@@ -25,6 +31,16 @@
     <h3>가나다라마바사</h3>
     <h3>Basic Navbar Example</h3>
     <p>A navigation bar is a navigation header that is placed at the top of the page.</p>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="pull-right"><a href="/">홈으로</a></p>
+        <p class="text-muted">&copy; 2016 어류도감. All rights are reserved.</p>
+        <p>전라남도 여수시 소호로 524</p>
+        <p>전화: 061-686-0264</p>
+      </div>
+    </footer>
+
   </div>
 </div>
 {% endblock %}

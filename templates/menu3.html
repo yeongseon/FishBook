@@ -3,6 +3,17 @@
 {% block html_attribs %} lang="kr" {% endblock  %}
 {% block title %} 어류도감 {% endblock %}ss
 
+{% block head %}
+{{super()}}
+<link rel="icon" href="../static/favicon.ico">
+{% endblock %}
+
+{% block metas %}
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% endblock %}
+
 {% block styles %}
 {{super()}}
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -19,6 +30,16 @@
     <div class="page-header">
       <h1>Hello, {{name}} </h1>
     </div>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="pull-right"><a href="/">홈으로</a></p>
+        <p class="text-muted">&copy; 2016 어류도감. All rights are reserved.</p>
+        <p>전라남도 여수시 소호로 524</p>
+        <p>전화: 061-686-0264</p>
+      </div>
+    </footer>
+
   </div>
 </div>
 {% endblock %}
